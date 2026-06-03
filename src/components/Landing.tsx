@@ -19,13 +19,15 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
-import heroImg from "@/assets/major-hero.jpg";
-import portMc from "@/assets/portfolio-mc.jpg";
+import heroAsset from "@/assets/major-hero.jpg.asset.json";
+import portraitAsset from "@/assets/major-portrait.jpg.asset.json";
 import portVoice from "@/assets/portfolio-voice.jpg";
 import portMod from "@/assets/portfolio-moderation.jpg";
 import portTraining from "@/assets/portfolio-training.jpg";
-import portPodcast from "@/assets/portfolio-podcast.jpg";
-import portStage from "@/assets/portfolio-stage.jpg";
+const heroImg = heroAsset.url;
+const portStage = portraitAsset.url;
+const portMc = portraitAsset.url;
+const portPodcast = heroAsset.url;
 
 const nav = [
   { label: "Home", href: "#home" },
