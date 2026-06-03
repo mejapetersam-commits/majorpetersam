@@ -107,7 +107,7 @@ const stats = [
 
 const clients = [
   "AFRIVOX",
-  "PAN-AFRICAN SUMMIT",
+  "PAN AFRICAN SUMMIT",
   "NAIROBI FM",
   "BIG VOICE LTD",
   "TEDx",
@@ -131,7 +131,7 @@ export function Landing() {
       <header className="sticky top-0 z-50 backdrop-blur-md bg-[oklch(0.21_0.05_265/0.92)] text-primary-foreground border-b border-white/5">
         <div className="mx-auto max-w-7xl px-6 h-16 flex items-center justify-between">
           <a href="#home" className="flex items-center gap-2 font-display text-xl">
-            <span className="text-[var(--gold)]">M</span>ajor Petersam
+            Major Petersam
           </a>
           <nav className="hidden md:flex items-center gap-8 text-sm">
             {nav.map((n) => (
@@ -493,7 +493,7 @@ export function Landing() {
       <footer className="bg-primary text-primary-foreground/70 py-10 border-t border-white/5">
         <div className="mx-auto max-w-7xl px-6 flex flex-wrap items-center justify-between gap-4 text-sm">
           <div className="font-display text-base">
-            <span className="text-[var(--gold)]">M</span>ajor Petersam
+            Major Petersam
           </div>
           <div className="text-xs">© {new Date().getFullYear()} Major Petersam. All rights reserved.</div>
           <div className="flex items-center gap-4">
