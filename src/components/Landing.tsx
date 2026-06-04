@@ -26,16 +26,26 @@ import stageAsset from "@/assets/major-hero.jpg.asset.json";
 import portVoice from "@/assets/portfolio-voice.jpg";
 import portMod from "@/assets/portfolio-moderation.jpg";
 import portTraining from "@/assets/portfolio-training.jpg";
+import mistySpringsAd from "@/assets/misty-springs-ad.mp4.asset.json";
+import nobleParkAd from "@/assets/noble-park-ad.mp4.asset.json";
+import kitisuruFallsAd from "@/assets/kitisuru-falls-ad.mp4.asset.json";
 const heroImg = heroAsset.url;
 const portStage = stageAsset.url;
 const portMc = portraitAsset.url;
 const portPodcast = bomberAsset.url;
+
+const ads = [
+  { title: "Misty Springs", tag: "Real Estate Ad", src: mistySpringsAd.url },
+  { title: "Noble Park", tag: "Property Campaign", src: nobleParkAd.url },
+  { title: "Kitisuru Falls", tag: "Brand Spot", src: kitisuruFallsAd.url },
+];
 
 const nav = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
   { label: "Portfolio", href: "#portfolio" },
+  { label: "Adverts", href: "#adverts" },
   { label: "Testimonials", href: "#testimonials" },
   { label: "Contact", href: "#contact" },
 ];
@@ -361,6 +371,45 @@ export function Landing() {
           >
             <Play className="w-4 h-4" /> Listen to samples
           </a>
+        </div>
+      </section>
+
+      {/* ADVERTS */}
+      <section id="adverts" className="bg-[oklch(0.96_0.01_247)] py-24">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="max-w-2xl">
+            <div className="text-xs uppercase tracking-widest text-[var(--gold)] font-semibold">Adverts</div>
+            <h2 className="mt-3 text-3xl md:text-5xl font-display">
+              Campaigns voiced &amp; <span className="italic">brought to life</span>.
+            </h2>
+            <p className="mt-4 text-muted-foreground">
+              A selection of audio-visual ads featuring Major's voice and creative direction.
+            </p>
+          </div>
+          <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {ads.map((ad) => (
+              <figure
+                key={ad.title}
+                className="group rounded-2xl overflow-hidden border border-border bg-card shadow-[var(--shadow-elegant)]"
+              >
+                <div className="relative aspect-[9/16] bg-black">
+                  <video
+                    src={ad.src}
+                    controls
+                    playsInline
+                    preload="metadata"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <figcaption className="p-4">
+                  <div className="text-[10px] uppercase tracking-widest text-[var(--gold)] font-semibold">
+                    {ad.tag}
+                  </div>
+                  <div className="font-display text-lg mt-1">{ad.title}</div>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
         </div>
       </section>
 
