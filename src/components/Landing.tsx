@@ -376,7 +376,6 @@ export function Landing() {
 
       {/* TESTIMONIALS */}
       <section id="testimonials" className="bg-primary text-primary-foreground py-24">
-      {/* placeholder */}
         <div className="mx-auto max-w-7xl px-6">
           <div className="max-w-2xl">
             <div className="text-xs uppercase tracking-widest text-[var(--gold)] font-semibold">Testimonials</div>
