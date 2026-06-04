@@ -26,16 +26,26 @@ import stageAsset from "@/assets/major-hero.jpg.asset.json";
 import portVoice from "@/assets/portfolio-voice.jpg";
 import portMod from "@/assets/portfolio-moderation.jpg";
 import portTraining from "@/assets/portfolio-training.jpg";
+import mistySpringsAd from "@/assets/misty-springs-ad.mp4.asset.json";
+import nobleParkAd from "@/assets/noble-park-ad.mp4.asset.json";
+import kitisuruFallsAd from "@/assets/kitisuru-falls-ad.mp4.asset.json";
 const heroImg = heroAsset.url;
 const portStage = stageAsset.url;
 const portMc = portraitAsset.url;
 const portPodcast = bomberAsset.url;
+
+const ads = [
+  { title: "Misty Springs", tag: "Real Estate Ad", src: mistySpringsAd.url },
+  { title: "Noble Park", tag: "Property Campaign", src: nobleParkAd.url },
+  { title: "Kitisuru Falls", tag: "Brand Spot", src: kitisuruFallsAd.url },
+];
 
 const nav = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
   { label: "Portfolio", href: "#portfolio" },
+  { label: "Adverts", href: "#adverts" },
   { label: "Testimonials", href: "#testimonials" },
   { label: "Contact", href: "#contact" },
 ];
