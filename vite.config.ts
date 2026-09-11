@@ -12,4 +12,12 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  // Force the Vercel output preset. Without this, nitro relies on its own
+  // auto-detection to notice it's running on Vercel, which requires
+  // nitro >= 3.0.260603-beta. This project is pinned to 3.0.260429-beta,
+  // so auto-detection silently falls back to a plain Node build that
+  // Vercel can't route — causing 404s on every page.
+  nitro: {
+    preset: "vercel",
+  },
 });
