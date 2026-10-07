@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { Play } from "lucide-react";
+import { reelUrl } from "@/lib/content";
 import blue from "@/assets/major-blue.jpg";
 import chair from "@/assets/major-chair.jpg";
 import bomber from "@/assets/major-bomber.jpg";
@@ -26,7 +28,17 @@ function Portfolio() {
     <div className="min-h-screen flex flex-col bg-background text-foreground">
       <SiteHeader />
       <main className="flex-1 mx-auto max-w-6xl w-full px-6 py-16 md:py-24">
-        <h1 className="text-4xl md:text-5xl font-display">Portfolio</h1>
+        <div className="flex flex-wrap items-end justify-between gap-4">
+          <h1 className="text-4xl md:text-5xl font-display">Portfolio</h1>
+          <a
+            href={reelUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-3 rounded-md font-semibold hover:opacity-90 transition"
+          >
+            <Play className="w-4 h-4" /> Hear the reel
+          </a>
+        </div>
         <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {photos.map((p) => (
             <img

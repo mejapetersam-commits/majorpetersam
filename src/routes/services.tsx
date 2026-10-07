@@ -7,7 +7,10 @@ export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
       { title: "Services | Major Petersam" },
-      { name: "description", content: "Voiceover, MC, moderation, training and consulting." },
+      {
+        name: "description",
+        content: "Corporate MC, panel moderation, adverts and communication.",
+      },
     ],
   }),
   component: Services,

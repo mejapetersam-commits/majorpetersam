@@ -7,7 +7,10 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About | Major Petersam" },
-      { name: "description", content: "Communication professional in voice, events and training." },
+      {
+        name: "description",
+        content: "Corporate communicator: MC, panel moderator and voice for adverts.",
+      },
     ],
   }),
   component: About,
@@ -21,8 +24,8 @@ function About() {
         <div>
           <h1 className="text-4xl md:text-5xl font-display">About</h1>
           <p className="mt-6 text-lg leading-relaxed text-foreground/80">
-            I'm Major, a communication professional in voice, events and training. I help
-            organizations connect through voice.
+            I'm Major Petersam, a corporate communicator. I host events, moderate panels and voice
+            adverts for leading brands, including Samsung, Safaricom and Startimes.
           </p>
         </div>
         <img

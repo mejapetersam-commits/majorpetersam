@@ -1,14 +1,18 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Play } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import hero from "@/assets/major-blue.jpg";
+import { clients, reelUrl } from "@/lib/content";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Major Petersam" },
-      { name: "description", content: "Voice artist, MC, moderator and trainer." },
+      {
+        name: "description",
+        content: "Corporate MC, panel moderator and voice artist for leading brands.",
+      },
     ],
   }),
   component: Home,
@@ -27,7 +31,9 @@ function Home() {
             <h1 className="text-5xl md:text-7xl font-display font-bold leading-[1.05]">
               Major <span className="text-[var(--gold)]">Petersam</span>
             </h1>
-            <p className="mt-6 text-lg text-white/75">Voice Artist, MC, Moderator, Trainer.</p>
+            <p className="mt-6 text-lg text-white/75">
+              Corporate MC, Panel Moderator and Voice for Adverts.
+            </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
                 to="/contact"
@@ -35,12 +41,22 @@ function Home() {
               >
                 Book Major <ArrowRight className="w-4 h-4" />
               </Link>
-              <Link
-                to="/portfolio"
-                className="inline-flex items-center border border-white/20 px-6 py-3 rounded-md font-semibold hover:bg-white/5 transition"
+              <a
+                href={reelUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 border border-white/20 px-6 py-3 rounded-md font-semibold hover:bg-white/5 transition"
               >
-                Portfolio
-              </Link>
+                <Play className="w-4 h-4" /> Hear the reel
+              </a>
+            </div>
+            <div className="mt-12">
+              <div className="text-xs uppercase tracking-widest text-white/50">Trusted by</div>
+              <div className="mt-3 flex flex-wrap gap-x-8 gap-y-2 font-display text-xl text-white/80">
+                {clients.map((c) => (
+                  <span key={c}>{c}</span>
+                ))}
+              </div>
             </div>
           </div>
           <div className="rounded-3xl overflow-hidden border border-white/10 shadow-[var(--shadow-elegant)]">

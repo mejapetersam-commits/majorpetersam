@@ -81,20 +81,20 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "Major Petersam" },
       {
         name: "description",
-        content: "Voice artist, corporate MC, moderator, and communication consultant.",
+        content: "Corporate MC, panel moderator and voice artist for leading brands.",
       },
       { name: "author", content: "Major Petersam" },
       { property: "og:title", content: "Major Petersam" },
       {
         property: "og:description",
-        content: "Voice artist, corporate MC, moderator, and communication consultant.",
+        content: "Corporate MC, panel moderator and voice artist for leading brands.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:title", content: "Major Petersam" },
       {
         name: "twitter:description",
-        content: "Voice artist, corporate MC, moderator, and communication consultant.",
+        content: "Corporate MC, panel moderator and voice artist for leading brands.",
       },
       {
         property: "og:image",
