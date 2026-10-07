@@ -79,16 +79,33 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Major Petersam" },
-      { name: "description", content: "Voice artist, corporate MC, moderator, and communication consultant." },
+      {
+        name: "description",
+        content: "Voice artist, corporate MC, moderator, and communication consultant.",
+      },
       { name: "author", content: "Major Petersam" },
       { property: "og:title", content: "Major Petersam" },
-      { property: "og:description", content: "Voice artist, corporate MC, moderator, and communication consultant." },
+      {
+        property: "og:description",
+        content: "Voice artist, corporate MC, moderator, and communication consultant.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:title", content: "Major Petersam" },
-      { name: "twitter:description", content: "Voice artist, corporate MC, moderator, and communication consultant." },
-      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/liP67DF1XhXe030JbY4ZOQyM4ZH2/social-images/social-1780491942089-WhatsApp_Image_2026-06-03_at_05.32.32.webp" },
-      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/liP67DF1XhXe030JbY4ZOQyM4ZH2/social-images/social-1780491942089-WhatsApp_Image_2026-06-03_at_05.32.32.webp" },
+      {
+        name: "twitter:description",
+        content: "Voice artist, corporate MC, moderator, and communication consultant.",
+      },
+      {
+        property: "og:image",
+        content:
+          "https://storage.googleapis.com/gpt-engineer-file-uploads/liP67DF1XhXe030JbY4ZOQyM4ZH2/social-images/social-1780491942089-WhatsApp_Image_2026-06-03_at_05.32.32.webp",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://storage.googleapis.com/gpt-engineer-file-uploads/liP67DF1XhXe030JbY4ZOQyM4ZH2/social-images/social-1780491942089-WhatsApp_Image_2026-06-03_at_05.32.32.webp",
+      },
     ],
     links: [
       {

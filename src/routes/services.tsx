@@ -7,10 +7,7 @@ export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
       { title: "Services | Major Petersam" },
-      {
-        name: "description",
-        content: "Voiceover, corporate MC, moderation, training, and communication consulting.",
-      },
+      { name: "description", content: "Voiceover, MC, moderation, training and consulting." },
     ],
   }),
   component: Services,
@@ -18,34 +15,19 @@ export const Route = createFileRoute("/services")({
 
 function Services() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen flex flex-col bg-background text-foreground">
       <SiteHeader />
-      <section className="bg-[oklch(0.96_0.01_247)] py-24">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="max-w-2xl">
-            <div className="text-xs uppercase tracking-widest text-[var(--gold)] font-semibold">
-              Services
-            </div>
-            <h1 className="mt-3 text-3xl md:text-5xl font-display">
-              One voice. Five ways to <span className="italic">move</span> your audience.
-            </h1>
-          </div>
-          <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {services.map((s) => (
-              <div
-                key={s.title}
-                className="group relative bg-card border border-border rounded-2xl p-7 hover:border-[var(--gold)] transition-all hover:-translate-y-1 hover:shadow-[var(--shadow-elegant)]"
-              >
-                <div className="w-12 h-12 rounded-xl bg-primary text-primary-foreground flex items-center justify-center group-hover:bg-[var(--gold)] group-hover:text-[var(--gold-foreground)] transition">
-                  <s.icon className="w-6 h-6" />
-                </div>
-                <h2 className="mt-5 text-xl font-display">{s.title}</h2>
-                <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <main className="flex-1 mx-auto max-w-4xl w-full px-6 py-16 md:py-24">
+        <h1 className="text-4xl md:text-5xl font-display">Services</h1>
+        <ul className="mt-10 divide-y divide-border border-y border-border">
+          {services.map((s) => (
+            <li key={s.title} className="py-6 flex flex-wrap items-baseline justify-between gap-2">
+              <h2 className="text-xl font-display">{s.title}</h2>
+              <p className="text-muted-foreground">{s.desc}</p>
+            </li>
+          ))}
+        </ul>
+      </main>
       <SiteFooter />
     </div>
   );
